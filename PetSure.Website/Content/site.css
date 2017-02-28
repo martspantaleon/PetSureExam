@@ -1,0 +1,29 @@
+﻿/*.input-border {
+    border: 1px solid #000 !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}*/
+
+.file {
+    width: 522px;
+    height: 70px;
+    padding: 20px;
+    border: 2px dotted transparent;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #000000;
+    border-color: #161b1f;
+    width: 124px;
+}
+
+.link {
+    margin-top: 10px;
+}

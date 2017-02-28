@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="PetSure">
+<head>
+    <title>PetSure</title>
+    <base href="/">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="/Scripts/angular-route.min.js"></script>
+    <script src="/Scripts/angular-resource.min.js"></script>
+    <script src="/app/app.js"></script>
+
+    <script src="/app/controller/PetSureController.js"></script>
+    <script src="/app/services/PetSureServices.js"></script>
+</head>
+
+<body ng-controller="PetSureController">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-4">
+                <img src="../../Content/images/PetSure.png" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3">
+                <h1>Make a claim</h1>
+            </div>
+        </div>
+
+        <form class="form-horizontal" name="claimPetForm">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="col-md-5">Make a claim for your pet</div>
+                    <div class="col-md-5">
+                        <select class="form-control" ng-model="pet.PetName"
+                                ng-options="pet.Value as pet.Text for pet in PetNameList">
+                            <option value="" selected="selected">- select -</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <br /><br /><br />
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 input-border">
+                    <div class="row">
+                        <div class="col-md-5">Attach invoice for us here</div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-5">
+                            <input class="file" type="file" ng-model="uploadFile" tabindex="9" class="btn btn-default" onchange="angular.element(this).scope().selectFile(this.files)" required />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary btn-lg" aria-hidden="true">Submit</button>
+                        </div>
+                        <div class="col-md-4 link">
+                            <a href="">or save for later</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
